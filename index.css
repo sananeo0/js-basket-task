@@ -1,0 +1,78 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+.card-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card {
+  align-items: center;
+}
+
+.basket-container {
+  margin-top: 300px;
+}
+
+.basket-item {
+  display: flex;
+  border-top: 1px solid grey;
+  padding: 0 20px;
+  color: black;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basket-item p {
+  margin: 0;
+}
+
+.basket-item .left {
+  display: flex;
+}
+
+.basket-item .count {
+  padding: 0 10px;
+}
+
+.card img {
+  height: 286px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 2rem;
+  padding: 1rem;
+}
+
+.btn.btn-danger.delete-btn {
+  font-weight: 600;
+  font-size: larger;
+  margin: 0.3rem;
+}
+
+.modal-body > * {
+  margin-top: 1rem;
+}
+
+.modal-dialog .modal-content {
+  width: 60rem;
+}
+
+.modal-dialog .modal-footer {
+  justify-content: space-between;
+  font-size: large;
+  font-weight: 700;
+}
+
