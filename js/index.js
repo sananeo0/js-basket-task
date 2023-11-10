@@ -141,7 +141,20 @@ function renderBasketSection() {
       let id = e.target.getAttribute("data-id");
       let basket = JSON.parse(localStorage.getItem("basket"));
       let foundBasketItem = basket.find((x) => x.id == id);
-      if (foundBasketItem.count == 1) return;
+      if (foundBasketItem.count == 1) {
+
+        let removedItem = basket.find((x) => x.id == id);
+
+        counter -= removedItem.count;
+
+        basket = basket.filter((x) => x.id != id);
+
+        localStorage.setItem("basket", JSON.stringify(basket));
+        localStorage.setItem("counter", counter);
+
+        renderBasketSection();
+        return;
+      };
       foundBasketItem.count--;
       localStorage.setItem("basket", JSON.stringify(basket));
       counter -= 1;
